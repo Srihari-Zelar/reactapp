@@ -18,7 +18,7 @@ class App extends React.Component{
     componentWillMount(){
         this.callAPI();
     }
-}
+
 
 render(){
   return (
@@ -32,6 +32,7 @@ render(){
       <p>{this.state.apiResponse}</p>
     </div>
   );
+}
 }
 
 export default App;
