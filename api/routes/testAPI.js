@@ -5,12 +5,16 @@ router.get("/",function(req,res,next){
     res.send("Employees Table");
 });
 
-app.get("/employees", async (req, res) => {
-    try {
-    const allemployees = await pool.query("SELECT * FROM employees");
-    res.json(allemployees.rows);
-    } catch (err) {
-    console.error(err.message);
-    }
-})
+exports.list = function (req, res) {
+
+    client.query('SELECT * FROM employees', function (err, result) {
+        if (err) {
+            console.log(err);
+            res.status(400).send(err);
+        }
+        res.render('employees/list', { title: "Employees", data: result.rows });
+    });
+
+};
+
 module.exports=router;
