@@ -5,7 +5,7 @@ router.get("/",function(req,res,next){
     res.send("Employees Table");
 });
 
-exports.list = function (req, res) {
+router.get("/",function(req,res,next){
 
     client.query('SELECT * FROM employees', function (err, result) {
         if (err) {
