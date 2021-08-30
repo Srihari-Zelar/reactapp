@@ -10,7 +10,7 @@ router.get("/",function(req,res,next){
                     res.status(400).send(err);
                }
                res.render('employees/list', { title: "Employees", data: result.rows });
-    }));
+    }))
 
 //});
 
