@@ -1,7 +1,8 @@
 FROM        node:alpine as build-step
+RUN         apt update -y
 RUN         mkdir /alpine
 WORKDIR     /alpine
 COPY        package.json /alpine
-RUN         npm install -y
+RUN         apt install npm -y
 COPY        . /alpine
-RUN         npm run build
+RUN         npm start
