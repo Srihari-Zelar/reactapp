@@ -7,6 +7,7 @@ var cors = require("cors");
 var routes = require('./routes');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var pool = require ("./database");
 var employees = require('./routes/employees')
 testAPIRouter= require("./routes/testAPI");
 var app = express();
