@@ -3,7 +3,6 @@ var router=express.Router();
 
 router.get("/",function(req,res,next){
     res.send("Employees Table");
-});
 
 const { Client } = require('pg');
 var connectionString = "postgres://postgres:1234@localhost:5432/empdata";
@@ -25,5 +24,7 @@ exports.list = function (req, res) {
     });
 
 };
+
+});
 
 module.exports=router;
