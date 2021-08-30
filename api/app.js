@@ -29,9 +29,6 @@ app.use('/users', usersRouter);
 app.use("/testAPI", testAPIRouter);
 app.get("/database");
 app.get('/employees', employees.list);
-app.get('/', function(req, res){
-    res.render('index');
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
