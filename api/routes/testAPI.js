@@ -6,14 +6,14 @@ router.get("/",function(req,res,next){
 });
 
 router.get("/",function(req,res,next){
-
-    client.query('SELECT * FROM employees', function (err, result) {
-        if (err) {
-            console.log(err);
-            res.status(400).send(err);
-        }
-        res.render('employees/list', { title: "Employees", data: result.rows });
-    });
+    res.send(
+               client.query('SELECT * FROM employees', function (err, result) {
+               if (err) {
+                    console.log(err);
+                    res.status(400).send(err);
+               }
+               res.render('employees/list', { title: "Employees", data: result.rows });
+    }));
 
 });
 
