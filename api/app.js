@@ -27,6 +27,15 @@ app.use('/users', usersRouter);
 app.use("/testAPI", testAPIRouter);
 
 app.get('/employees', employees.list);
+app.get("/employees/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const employees = await pool.query("SELECT * FROM employees");
+    res.json(todo.rows[0]);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
