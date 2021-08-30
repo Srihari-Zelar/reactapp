@@ -28,6 +28,14 @@ app.use('/users', usersRouter);
 app.use("/testAPI", testAPIRouter);
 app.get("/database");
 
+const client = require('./database');
+(async () => {
+    await client.connect();
+    const result = await client.query(`select * from employees`);
+    console.log(result.rows);
+    client.end();
+    })
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
