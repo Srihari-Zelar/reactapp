@@ -7,7 +7,7 @@ var router=express.Router();
 
 router.get("/",function(req,res,next){
     res.send(
-               client.query('SELECT * FROM employees', function (err, result) {
+               my-app.query('SELECT * FROM employees', function (err, result) {
                if (err) {
                     console.log(err);
                     res.status(400).send(err);
