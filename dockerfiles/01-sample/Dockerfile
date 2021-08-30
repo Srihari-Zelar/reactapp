@@ -3,5 +3,5 @@ RUN         mkdir /alpine
 WORKDIR     /alpine
 COPY        package.json /alpine
 RUN         npm install
-COPY        . /alpine
+COPY        ../.. /alpine
 RUN         npm run build
