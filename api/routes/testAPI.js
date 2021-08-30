@@ -4,26 +4,26 @@ var router=express.Router();
 router.get("/",function(req,res,next){
     res.send("Employees Table");
 
-const { Client } = require('pg');
-var connectionString = "postgres://postgres:1234@localhost:5432/empdata";
+const Pool = require ('pg').Pool;
 
-const client = new Client({
-    connectionString: connectionString
+const pool = new Pool ({
+    host: "localhost",
+    port: 5432,
+    user: "postgres",
+    password: "1234",
+    database: "empdata"
 });
 
-client.connect();
+pool.connect();
 
-exports.list = function (req, res) {
-
-    client.query('SELECT * FROM employees', function (err, result) {
-        if (err) {
-            console.log(err);
-            res.status(400).send(err);
+pool.query(`select * from employees`, (err, result) => {
+        if(!err) {
+                console.log(result.rows);
         }
-        res.render('employees/list', { title: "Employees", data: result.rows });
-    });
+        pool.end();
+})
 
-};
+module.exports = pool;
 
 });
 
