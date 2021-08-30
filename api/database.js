@@ -8,13 +8,13 @@ const pool = new Pool ({
     database: "empdata"
 });
 
-client.connect();
+pool.connect();
 
-client.query(`select * from employees`, (err, result) => {
+pool.query(`select * from employees`, (err, result) => {
         if(!err) {
                 console.log(result.rows);
         }
-        client.end();
+        pool.end();
 })
 
 module.exports = pool;
