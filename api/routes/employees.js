@@ -15,8 +15,6 @@ pool.query(`select * from employees`, (err, result) => {
                 console.log(result.rows);
         }
         pool.end();
-})
+});
 
 module.exports = pool;
-
-});
