@@ -1,8 +1,22 @@
-var express = require("express");
-var router=express.Router();
+const Pool = require ('pg').Pool;
 
-router.get("/",function(req,res,next){
-    res.send( connect = "postgres://postgres:1234@ocalhost:5432/empdata");
+const pool = new Pool ({
+    host: "localhost",
+    port: 5432,
+    user: "postgres",
+    password: "1234",
+    database: "empdata"
 });
 
-module.exports=router;
+pool.connect();
+
+pool.query(`select * from employees`, (err, result) => {
+        if(!err) {
+                console.log(result.rows);
+        }
+        pool.end();
+})
+
+module.exports = pool;
+
+});
