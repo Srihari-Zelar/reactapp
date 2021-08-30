@@ -11,6 +11,7 @@ var pool = require ("./database");
 var employees = require('./routes/employees')
 testAPIRouter= require("./routes/testAPI");
 var app = express();
+var connect = "postgres://postgres:1234@ocalhost:5432/empdata";
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,14 +29,6 @@ app.use('/users', usersRouter);
 app.use("/testAPI", testAPIRouter);
 app.get("/database");
 app.get('/employees', employees.list);
-
-const client = require('./database');
-(async () => {
-    await client.connect();
-    const result = await client.query(`select * from employees`);
-    console.log(result.rows);
-    client.end();
-    })
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
