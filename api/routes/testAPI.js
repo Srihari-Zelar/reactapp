@@ -15,6 +15,6 @@ router.get("/",function(req,res,next){
         res.render('employees/list', { title: "Employees", data: result.rows });
     });
 
-};
+});
 
 module.exports=router;
