@@ -7,7 +7,7 @@ app.listen(4000, ()=>{
     console.log("server is now listening at port 4000");
 })
 
-pool.connect();
+client.connect();
 
 
 app.get('/emp', (req, res)=>{
@@ -16,5 +16,5 @@ app.get('/emp', (req, res)=>{
         res.send(result.rows);
         }
     });
-    pool.end;
+    client.end;
 })
