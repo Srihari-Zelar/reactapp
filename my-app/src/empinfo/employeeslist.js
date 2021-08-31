@@ -16,5 +16,3 @@ const employeeslist = () => {
       console.error(err.message);
     }
   };
-
-
