@@ -11,7 +11,7 @@ client.connect();
 
 
 app.get('/emp', (req, res)=>{
-    client.query(`select * from employees`, (err,result) => {
+    client  .query(`select * from employees`, (err,result) => {
     if(!err){
         res.send(result.rows);
         }

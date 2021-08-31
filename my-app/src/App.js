@@ -9,7 +9,7 @@ class App extends React.Component{
     }
 
     callAPI(){
-        fetch("http://52.207.236.8:4000/testAPI")
+        fetch("http://52.207.236.8:4000/api")
             .then(res => res.text())
             .then(res => this.setState({apiResponse: res}));
     }
