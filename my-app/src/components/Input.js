@@ -4,7 +4,7 @@ const Input = () => {
 
     const [name] = useState("");
 
-    const async (e) => {
+    const onSubmitForm = async (e) => {
         e.preventDefault();
       try {
 
