@@ -4,7 +4,7 @@ import './App.css';
 import employeeslist from './empinfo/Employeeslist';
 
 
-function App(){
+render(){
   return (
     <div className="App">
       <header className="App-header">
