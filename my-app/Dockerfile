@@ -1,4 +1,4 @@
-FROM        ubuntu as build step
+FROM        ubuntu
 RUN         apt-get update
 RUN         mkdir /alpine
 WORKDIR     /alpine
