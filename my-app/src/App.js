@@ -5,7 +5,7 @@ import Input from './components/Input';
 import Listemployees from './components/Listemployees';
 
 function App() {
-  return (
+  return ( <Fragment>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -13,15 +13,15 @@ function App() {
           Simple React App
         </p>
       </header>
-      <Fragment>
-          <div className="container">
-          <Input />
-          <br />
-          <br />
-          <Listemployees />
-          </div>
-        </Fragment>
     </div>
+    <div className="container">
+      <Input />
+      <br />
+      <br />
+      <Listemployees />
+    </div>
+  </Fragment>
+
   );
 }
 
