@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 
-const employeeslist = () => {
+const Employeeslist = () => {
   const [employees, setemployees] = useState([]);
 
   const getemployees = async() => {
