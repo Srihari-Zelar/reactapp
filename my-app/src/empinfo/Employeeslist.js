@@ -18,4 +18,4 @@ const Employeeslist = () => {
   }
 };
 
-export default employeeslist;
+export default Employeeslist;
