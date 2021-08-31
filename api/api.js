@@ -1,4 +1,4 @@
-const pool =require('./database.js')
+const client =require('./database.js')
 const express = require ('express');
 const app = express();
 
@@ -11,7 +11,7 @@ client.connect();
 
 
 app.get('/emp', (req, res)=>{
-    pool.query(`select * from employees`, (err,result) => {
+    client.query(`select * from employees`, (err,result) => {
     if(!err){
         res.send(result.rows);
         }
