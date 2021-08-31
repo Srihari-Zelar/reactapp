@@ -10,7 +10,7 @@ const Employeeslist = () => {
       console.log(response);
       const jsonData = await response.json();
 
-      setemployees(jsonData);
+      Employeeslist(jsonData);
 
     } catch (err) {
       console.error(err.message);
