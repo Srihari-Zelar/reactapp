@@ -6,7 +6,7 @@ const employeeslist = () => {
   const getemployees = async() => {
     try {
 
-      const response = await fetch("http://172.31.30.28:4000/emp");
+      const response = await fetch("http://52.207.236.8:4000/emp");
       console.log(response);
       const jsonData = await response.json();
 
