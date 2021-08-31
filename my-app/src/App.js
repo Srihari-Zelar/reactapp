@@ -15,6 +15,6 @@ render(){
       </header>
     </div>
   );
-}
+};
 
 export default App;
