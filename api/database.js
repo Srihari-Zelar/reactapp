@@ -1,6 +1,6 @@
-const Pool = require ('pg').Pool;
+const client = require ('pg')
 
-const pool = new Pool ({
+const client = new Client ({
     host: "localhost",
     port: 5432,
     user: "postgres",
@@ -8,13 +8,4 @@ const pool = new Pool ({
     database: "empdata"
 });
 
-pool.connect();
-
-pool.query(`select * from employees`, (err, result) => {
-        if(!err) {
-                console.log(result.rows);
-        }
-        pool.end();
-})
-
-module.exports = pool;
+modules.export = client
