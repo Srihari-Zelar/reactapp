@@ -13,7 +13,6 @@ render(){
           Simple React App
         </p>
       </header>
-      <p>{this.state.apiResponse}</p>
     </div>
   );
 }
