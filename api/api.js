@@ -10,7 +10,7 @@ app.listen(4000, ()=>{
 client.connect();
 
 
-app.get('/emp', (req, res)=>{
+app.get('/employee', (req, res)=>{
     client  .query(`select * from employee`, (err,result) => {
     if(!err){
         res.send(result.rows);
