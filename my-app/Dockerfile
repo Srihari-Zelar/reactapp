@@ -4,5 +4,5 @@ RUN         mkdir /alpine
 WORKDIR     /alpine
 COPY        package.json /alpine
 COPY        . /alpine
-RUN         apt-get install npm
+RUN         npm install
 RUN         npm start
