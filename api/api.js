@@ -1,4 +1,4 @@
-const client =require('./database.js')
+const pool =require('./database.js')
 const express = require ('express');
 const app = express();
 
@@ -7,14 +7,14 @@ app.listen(4000, ()=>{
     console.log("server is now listening at port 4000");
 })
 
-client.connect();
+pool.connect();
 
 
 app.get('/emp', (req, res)=>{
-    client.query(`select * from employees`, (err,result) => {
+    pool.query(`select * from employees`, (err,result) => {
     if(!err){
         res.send(result.rows);
         }
     });
-    client.end;
+    pool.end;
 })
