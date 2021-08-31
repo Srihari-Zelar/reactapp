@@ -1,25 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-class App extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={apiResponse:""};
-    }
-
-    callAPI(){
-        fetch("http://52.207.236.8:4000/api")
-            .then(res => res.text())
-            .then(res => this.setState({apiResponse: res}));
-    }
-
-    componentWillMount(){
-        this.callAPI();
-    }
+import employeeslist from './empinfo/employeeslist';
 
 
-render(){
+function App(){
   return (
     <div className="App">
       <header className="App-header">
