@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import employeeslist from './empinfo/Employeeslist';
-
+import Input from './components/Input';
+import Listemployees from './components/Listemployees';
 
 function App() {
   return (
@@ -13,6 +13,14 @@ function App() {
           Simple React App
         </p>
       </header>
+      <Fragment>
+          <div className="container">
+          <Input />
+          <br />
+          <br />
+          <Listemployees />
+          </div>
+        </Fragment>
     </div>
   );
 }
