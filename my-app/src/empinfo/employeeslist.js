@@ -15,4 +15,4 @@ const employeeslist = () => {
     } catch (err) {
       console.error(err.message);
     }
-  };
+  }
