@@ -16,3 +16,6 @@ const employeeslist = () => {
       console.error(err.message);
     }
   }
+};
+
+export default employeeslist;
