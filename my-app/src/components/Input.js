@@ -2,9 +2,9 @@ import React, { Fragment, useState } from 'react';
 
 const Input = () => {
 
-    const [name, setName] = useState("");
+    const [name] = useState("");
 
-    const onSubmitForm = async (e) => {
+    const = async (e) => {
         e.preventDefault();
       try {
 
