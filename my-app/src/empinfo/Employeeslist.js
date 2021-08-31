@@ -1,7 +1,7 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React { useState } from 'react';
 
 const Employeeslist = () => {
-  const [employees, setemployees] = useState([]);
+  const [Employeeslist] = useState([]);
 
   const getemployees = async() => {
     try {
