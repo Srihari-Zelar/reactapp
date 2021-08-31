@@ -4,7 +4,7 @@ import './App.css';
 import employeeslist from './empinfo/Employeeslist';
 
 
-render({
+function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +15,7 @@ render({
       </header>
     </div>
   );
-});
+}
 
 
 export default App;
